@@ -20,17 +20,38 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-package main
+package sturavoting
 
-import (
-	"fmt"
+import "testing"
 
-	"github.com/FabianWe/sturavoting"
-)
+func TestMedianOne(t *testing.T) {
+	v1 := NewMedianVote(4, 200)
+	v2 := NewMedianVote(3, 1000)
+	v3 := NewMedianVote(2, 700)
+	v4 := NewMedianVote(2, 500)
 
-func main() {
-	fmt.Println("Hello sturavoting")
-	v1 := sturavoting.NewMedianVote(1, 1)
-	votes := []*sturavoting.MedianVote{v1}
-	sturavoting.EvaluateMedian(votes, 0.5)
+	res := EvaluateMedian([]*MedianVote{v1, v2, v3, v4}, 0.5)
+	if res.VotesRequired != 5 {
+		t.Errorf("Expected 5 required votes in median, got %d", res.VotesRequired)
+	}
+
+	if res.Value != 500 {
+		t.Errorf("Expected value of 500 in median, got %d", res.Value)
+	}
+}
+
+func TestMedianTwo(t *testing.T) {
+	// Example from stura.org
+	v1 := NewMedianVote(1, 0)
+	v2 := NewMedianVote(2, 150)
+	v3 := NewMedianVote(3, 200)
+
+	res := EvaluateMedian([]*MedianVote{v1, v2, v3}, 0.5)
+	if res.VotesRequired != 3 {
+		t.Errorf("Expected 3 required votes in median, got %d", res.VotesRequired)
+	}
+
+	if res.Value != 150 {
+		t.Errorf("Expected value of 150 in median, got %d", res.Value)
+	}
 }
