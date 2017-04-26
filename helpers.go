@@ -20,32 +20,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-package main
+package sturavoting
 
-import (
-	"fmt"
+// IntMin returns the minimum of a and b.
+func IntMin(a, b int) int {
+	if a < b {
+		return a
+	} else {
+		return b
+	}
+}
 
-	"github.com/FabianWe/sturavoting"
-)
-
-func main() {
-	fmt.Println("Hello sturavoting")
-	v1 := sturavoting.NewMedianVote(1, 1)
-	votes := []*sturavoting.MedianVote{v1}
-	sturavoting.EvaluateMedian(votes, 0.5)
-
-	n := 4
-	for i := 0; i < n; i++ {
-		for j := 0; j < n; j++ {
-			if i == j {
-				continue
-			}
-			for k := 0; k < n; k++ {
-				if i == k || j == k {
-					continue
-				}
-				fmt.Printf("p[%d][%d] = p[%d][%d], p[%d][%d], p[%d][%d]\n", j, k, j, k, j, i, i, k)
-			}
-		}
+// IntMax returns the maximum of a and b.
+func IntMax(a, b int) int {
+	if a > b {
+		return a
+	} else {
+		return b
 	}
 }

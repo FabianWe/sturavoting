@@ -23,8 +23,12 @@
 package sturavoting
 
 import (
+	"fmt"
 	"sort"
+	"sync"
 )
+
+//// Median ////
 
 // MedianVote is used as a vote in a median procedure.
 // It contains information about the weight of the voter and the value
@@ -83,6 +87,180 @@ func EvaluateMedian(votes []*MedianVote, percentRequired float64) *MedianResult 
 			res.Value = vote.Value
 			break
 		}
+	}
+	return res
+}
+
+//// Schulze ////
+
+// SchulzeVote is a vote used in the Schulze procedure.
+type SchulzeVote struct {
+	// Weight is the weight of the voter.
+	Weight int
+	// Ranking is the ordering for all options.
+	// It must be a list of n elements if n is the number of possible options
+	// where Ordering[i] is the value in the ranking.
+	// Smaller values mean that the option is voted higher (comes first) in the
+	// ranking.
+	// For example: If there are three options and the first and third one should
+	// be equally preferred to option two the ranking would be
+	// [0, 1, 0].
+	Ranking []int
+}
+
+// NewSchulzeVote returns a new SchulzeVote. See struct documentation for
+// details.
+func NewSchulzeVote(weight int, ranking []int) *SchulzeVote {
+	return &SchulzeVote{Weight: weight, Ranking: ranking}
+}
+
+type IntMatrix [][]int
+
+func NewIntMatrix(n int) IntMatrix {
+	var res IntMatrix = make([][]int, n)
+	for i := 0; i < n; i++ {
+		res[i] = make([]int, n)
+	}
+	return res
+}
+
+func (m IntMatrix) Equals(other IntMatrix) bool {
+	n1, n2 := len(m), len(other)
+	if n1 != n2 {
+		return false
+	}
+	n := n1
+	for i := 0; i < n; i++ {
+		row1, row2 := m[i], other[i]
+		for j := 0; j < n; j++ {
+			if row1[j] != row2[j] {
+				return false
+			}
+		}
+	}
+	return true
+}
+
+type SchulzeRes struct {
+	VotesRequired int
+	D             IntMatrix
+	P             IntMatrix
+	Ranked        [][]int
+}
+
+func EvaluateSchulze(votes []*SchulzeVote, n int, percentRequired float64) (*SchulzeRes, error) {
+	// first compute votes required, check length of each result while doing this
+	weightSum := 0
+	for _, vote := range votes {
+		weightSum += vote.Weight
+		if len(vote.Ranking) != n {
+			return nil, fmt.Errorf("Expected ranking of length %d, got length %d", n, len(vote.Ranking))
+		}
+	}
+	votesRequred := int(float64(weightSum) * percentRequired)
+
+	d := computeD(votes, n)
+	p := computeP(d, n)
+	ranked := rankP(p, n)
+	res := &SchulzeRes{VotesRequired: votesRequred, D: d, P: p, Ranked: ranked}
+	return res, nil
+}
+
+// computeD computes the matrix d as described here:
+// http://de.wikipedia.org/wiki/Schulze-Methode#Implementierung
+func computeD(votes []*SchulzeVote, n int) IntMatrix {
+	res := NewIntMatrix(n)
+	for _, vote := range votes {
+		w := vote.Weight
+		ranking := vote.Ranking
+		for i := 0; i < n; i++ {
+			for j := i + 1; j < n; j++ {
+				switch {
+				case ranking[i] < ranking[j]:
+					res[i][j] += w
+				case ranking[j] < ranking[i]:
+					res[j][i] += w
+				}
+			}
+		}
+	}
+	return res
+}
+
+func computeP(d IntMatrix, n int) IntMatrix {
+	res := NewIntMatrix(n)
+	// first part: initialize p[i][j]
+	// we start a gourtine for each i and set p[i][j] for all j
+	var wg sync.WaitGroup
+	wg.Add(n)
+	for i := 0; i < n; i++ {
+		go func(i int) {
+			defer wg.Done()
+			for j := 0; j < n; j++ {
+				if i == j {
+					continue
+				}
+				if d[i][j] > d[j][i] {
+					res[i][j] = d[i][j]
+				}
+			}
+		}(i)
+	}
+	wg.Wait()
+	// TODO: is there a concurrent apporach?
+	for i := 0; i < n; i++ {
+		for j := 0; j < n; j++ {
+			if i == j {
+				continue
+			}
+			for k := 0; k < n; k++ {
+				if i == k || j == k {
+					continue
+				}
+				res[j][k] = IntMax(res[j][k], IntMin(res[j][i], res[i][k]))
+			}
+		}
+	}
+	return res
+}
+
+// rankP ranks the matrix p, inspired by
+// https://github.com/mgp/schulze-method/blob/master/schulze.py
+func rankP(p IntMatrix, n int) [][]int {
+	// wait for all i
+	var wg sync.WaitGroup
+	wg.Add(n)
+	candidateWins := make(map[int][]int)
+	// mutex used to sync writes to candidateWins
+	var mutex sync.Mutex
+	for i := 0; i < n; i++ {
+		go func(i int) {
+			defer wg.Done()
+			numWins := 0
+			for j := 0; j < n; j++ {
+				if i == j {
+					continue
+				}
+				if p[i][j] > p[j][i] {
+					numWins++
+				}
+			}
+			// get list from the dict and append to it
+			mutex.Lock()
+			candidateWins[numWins] = append(candidateWins[numWins], i)
+			mutex.Unlock()
+		}(i)
+	}
+	wg.Wait()
+	// get the keys from the dictionary and sort them (in reverse)
+	keys := make([]int, 0, len(candidateWins))
+	for key, _ := range candidateWins {
+		keys = append(keys, key)
+	}
+	sort.Sort(sort.Reverse(sort.IntSlice(keys)))
+	res := make([][]int, len(keys))
+	for i, key := range keys {
+		res[i] = candidateWins[key]
 	}
 	return res
 }
