@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="34cm" height="6cm" viewBox="112 7 672 119" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="112.5" y="7.43251" width="126.1" height="18"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="112.5" y="7.43251" width="126.1" height="18"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="175.55" y="21.4325">Categories</text>
+    <rect style="fill: #ffffff" x="112.5" y="25.4325" width="126.1" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="112.5" y="25.4325" width="126.1" height="52"/>
+    <polygon style="fill: #000000" points="115.5,35.4325 117.5,38.4325 119.5,35.4325 117.5,32.4325 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="121.5" y="41.4325">id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="185.4" y="41.4325">uint</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="121.5" y1="43.0325" x2="216.2" y2="43.0325"/>
+    <ellipse style="fill: #000000" cx="117.5" cy="51.4325" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="121.5" y="57.4325">name</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="185.4" y="57.4325">string</text>
+    <ellipse style="fill: #000000" cx="117.5" cy="67.4325" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="121.5" y="73.4325">created</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="185.4" y="73.4325">date</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="315.384" y="11.2257" width="182.9" height="32"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="315.384" y="11.2257" width="182.9" height="32"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="406.834" y="25.2257">VotersRevision</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="406.834" y="39.2257">A revision for a given category</text>
+    <rect style="fill: #ffffff" x="315.384" y="43.2257" width="182.9" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="315.384" y="43.2257" width="182.9" height="52"/>
+    <polygon style="fill: #000000" points="318.384,53.2257 320.384,56.2257 322.384,53.2257 320.384,50.2257 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="324.384" y="59.2257">id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="419.084" y="59.2257">uint</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="324.384" y1="60.8257" x2="449.884" y2="60.8257"/>
+    <ellipse style="fill: #000000" cx="320.384" cy="69.2257" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="324.384" y="75.2257">category_id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="419.084" y="75.2257">uint</text>
+    <ellipse style="fill: #000000" cx="320.384" cy="85.2257" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="324.384" y="91.2257">created</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="419.084" y="91.2257">date</text>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="239.658,43.8616 279.5,43.8616 279.5,43.9681 315.5,43.9681 "/>
+  <g>
+    <rect style="fill: #ffffff" x="560.999" y="13.4682" width="223.3" height="60"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="560.999" y="13.4682" width="223.3" height="60"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="672.649" y="27.4682">Voters</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="672.649" y="41.4682">Contains all the voters. They refer to</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="672.649" y="55.4682">a revision. revision_id and name must</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="672.649" y="69.4682">be unique together.</text>
+    <rect style="fill: #ffffff" x="560.999" y="73.4682" width="223.3" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="560.999" y="73.4682" width="223.3" height="52"/>
+    <polygon style="fill: #000000" points="563.999,83.4682 565.999,86.4682 567.999,83.4682 565.999,80.4682 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569.999" y="89.4682">id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="664.699" y="89.4682">uint</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="569.999" y1="91.0682" x2="695.499" y2="91.0682"/>
+    <ellipse style="fill: #000000" cx="565.999" cy="99.4682" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569.999" y="105.468">revision_id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="664.699" y="105.468">uint</text>
+    <ellipse style="fill: #000000" cx="565.999" cy="115.468" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569.999" y="121.468">name</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="664.699" y="121.468">varchar(150)</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="498,43.4681 529.499,43.4681 529.499,43.4682 551.263,43.4682 "/>
+    <polygon style="fill: #000000" points="558.763,43.4682 548.763,48.4682 551.263,43.4682 548.763,38.4682 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="558.763,43.4682 548.763,48.4682 551.263,43.4682 548.763,38.4682 "/>
+  </g>
+</svg>

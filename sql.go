@@ -20,28 +20,4 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-package main
-
-import (
-	"flag"
-	"fmt"
-	"path/filepath"
-
-	"github.com/FabianWe/sturavoting"
-	_ "github.com/go-sql-driver/mysql"
-	log "github.com/sirupsen/logrus"
-)
-
-func main() {
-	configDirPtr := flag.String("config", "./config", "Directory to store the configuration files.")
-	flag.Parse()
-	configDir, configDirParseErr := filepath.Abs(*configDirPtr)
-	if configDirParseErr != nil {
-		log.WithError(configDirParseErr).Fatal("Can't parse config dir path: ", configDir)
-	}
-	appContext, configErr := sturavoting.ParseConfig(configDir)
-	if configErr != nil {
-		log.WithError(configErr).Fatal("Can't parse config file(s)")
-	}
-	fmt.Println(appContext)
-}
+package sturavoting
