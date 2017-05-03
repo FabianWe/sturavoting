@@ -203,6 +203,10 @@ func ParseConfig(configDir string) (*VotingContext, error) {
 		return nil, openErr
 	}
 
+	if initErr := initDB(db); initErr != nil {
+		return nil, initErr
+	}
+
 	var invalidKeyTimer, sessionLifespan time.Duration
 
 	if conf.TimeSettings.invalidKeyTimer.Duration == time.Duration(0) {

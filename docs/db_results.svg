@@ -2,29 +2,30 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
 <svg width="26cm" height="11cm" viewBox="70 56 501 201" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g>
-    <rect style="fill: #ffffff" x="70" y="56" width="227" height="60"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="70" y="56" width="227" height="60"/>
+    <rect style="fill: #ffffff" x="70" y="56" width="227" height="74"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="70" y="56" width="227" height="74"/>
     <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="183.5" y="70">median_votes</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="183.5" y="84">Contains all votes for a median voting.</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="183.5" y="98">It references a voter and the</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="183.5" y="112">median_votings table.</text>
-    <rect style="fill: #ffffff" x="70" y="116" width="227" height="110"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="70" y="116" width="227" height="110"/>
-    <polygon style="fill: #000000" points="73,126 75,129 77,126 75,123 "/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="79" y="132">id</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="158.3" y="132">uint</text>
-    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="79" y1="133.6" x2="189.1" y2="133.6"/>
-    <ellipse style="fill: #000000" cx="75" cy="142" rx="2" ry="2"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="79" y="148">voting_id</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="158.3" y="148">uint</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="84" y="162">references median_votings</text>
-    <ellipse style="fill: #000000" cx="75" cy="179" rx="2" ry="2"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="79" y="185">voter_id</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="158.3" y="185">uint</text>
-    <ellipse style="fill: #000000" cx="75" cy="195" rx="2" ry="2"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="79" y="201">value</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="158.3" y="201">int</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="84" y="215">The value the voter voted for</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="183.5" y="112">median_votings table. voting_id and</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="183.5" y="126">voter_id must be unique together.</text>
+    <rect style="fill: #ffffff" x="70" y="130" width="227" height="110"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="70" y="130" width="227" height="110"/>
+    <polygon style="fill: #000000" points="73,140 75,143 77,140 75,137 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="79" y="146">id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="158.3" y="146">uint</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="79" y1="147.6" x2="189.1" y2="147.6"/>
+    <ellipse style="fill: #000000" cx="75" cy="156" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="79" y="162">voting_id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="158.3" y="162">uint</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="84" y="176">references median_votings</text>
+    <ellipse style="fill: #000000" cx="75" cy="193" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="79" y="199">voter_id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="158.3" y="199">uint</text>
+    <ellipse style="fill: #000000" cx="75" cy="209" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="79" y="215">value</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="158.3" y="215">int</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="84" y="229">The value the voter voted for</text>
   </g>
   <g>
     <rect style="fill: #ffffff" x="338" y="59" width="232.05" height="88"/>
@@ -50,7 +51,7 @@
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="480.2" y="216">uint</text>
     <ellipse style="fill: #000000" cx="343" cy="226" rx="2" ry="2"/>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="347" y="232">sorting_position</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="480.2" y="232">uint</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="480.2" y="232">int</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="352" y="246">The position of the option.</text>
   </g>
 </svg>

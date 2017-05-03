@@ -17,7 +17,7 @@
     <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="122.207" y1="89.8401" x2="216.907" y2="89.8401"/>
     <ellipse style="fill: #000000" cx="118.207" cy="98.2401" rx="2" ry="2"/>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="122.207" y="104.24">name</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="186.107" y="104.24">string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="186.107" y="104.24">varchar(150)</text>
     <ellipse style="fill: #000000" cx="118.207" cy="114.24" rx="2" ry="2"/>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="122.207" y="120.24">created</text>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="186.107" y="120.24">date</text>
@@ -25,7 +25,7 @@
   <g>
     <rect style="fill: #ffffff" x="414.378" y="11.9328" width="182.9" height="32"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="414.378" y="11.9328" width="182.9" height="32"/>
-    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="505.828" y="25.9328">voters_revision</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="505.828" y="25.9328">voters_revisions</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="505.828" y="39.9328">A revision for a given category</text>
     <rect style="fill: #ffffff" x="414.378" y="43.9328" width="182.9" height="73"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="414.378" y="43.9328" width="182.9" height="73"/>
@@ -41,7 +41,7 @@
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="423.378" y="112.933">created</text>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="518.078" y="112.933">date</text>
   </g>
-  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="338.858,35.2402 379.202,35.2402 379.202,35.483 415.202,35.483 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="338.857,35.2401 379.202,35.2401 379.202,35.483 415.202,35.483 "/>
   <g>
     <rect style="fill: #ffffff" x="713.734" y="13.4682" width="223.3" height="60"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="713.734" y="13.4682" width="223.3" height="60"/>
@@ -70,40 +70,37 @@
   <g>
     <rect style="fill: #ffffff" x="114.622" y="340.026" width="232.5" height="60"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="114.622" y="340.026" width="232.5" height="60"/>
-    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="230.872" y="354.026">voting_collection</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="230.872" y="354.026">voting_collections</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="230.872" y="368.026">A voting collection is a set of votings</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="230.872" y="382.026">(in groups). This is for example all</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="230.872" y="396.026">votings for one day.</text>
-    <rect style="fill: #ffffff" x="114.622" y="400.026" width="232.5" height="203"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="114.622" y="400.026" width="232.5" height="203"/>
+    <rect style="fill: #ffffff" x="114.622" y="400.026" width="232.5" height="187"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="114.622" y="400.026" width="232.5" height="187"/>
     <polygon style="fill: #000000" points="117.622,410.026 119.622,413.026 121.622,410.026 119.622,407.026 "/>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123.622" y="416.026">id</text>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="210.622" y="416.026">uint</text>
     <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="123.622" y1="417.626" x2="241.422" y2="417.626"/>
     <ellipse style="fill: #000000" cx="119.622" cy="426.026" rx="2" ry="2"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123.622" y="432.026">name</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="210.622" y="432.026">varchar(150)</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="128.622" y="446.026">Name, for example "Votings for</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="128.622" y="460.026">2017/05/04"</text>
-    <ellipse style="fill: #000000" cx="119.622" cy="477.026" rx="2" ry="2"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123.622" y="483.026">created</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="210.622" y="483.026">date</text>
-    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="119.622" cy="493.026" rx="2" ry="2"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123.622" y="499.026">voting_day</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="210.622" y="499.026">date</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="128.622" y="513.026">The time when this voting takes place,</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="128.622" y="527.026">used for sorting.</text>
-    <ellipse style="fill: #000000" cx="119.622" cy="544.026" rx="2" ry="2"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123.622" y="550.026">voters_id</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="210.622" y="550.026">uint</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="128.622" y="564.026">references voters_revision. The</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="128.622" y="578.026">revision is used to evaluate the</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="128.622" y="592.026">voting.</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123.622" y="432.026">voters_id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="210.622" y="432.026">uint</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="128.622" y="446.026">references voters_revision. The</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="128.622" y="460.026">revision is used to evaluate the</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="128.622" y="474.026">voting.</text>
+    <ellipse style="fill: #000000" cx="119.622" cy="491.026" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123.622" y="497.026">name</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="210.622" y="497.026">varchar(150)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="128.622" y="511.026">Name, for example "Votings for</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="128.622" y="525.026">2017/05/04"</text>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="119.622" cy="542.026" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123.622" y="548.026">voting_day</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="210.622" y="548.026">date</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="128.622" y="562.026">The time when this voting takes place,</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="128.622" y="576.026">used for sorting.</text>
   </g>
   <g>
     <rect style="fill: #ffffff" x="442.012" y="339.318" width="225.1" height="88"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="442.012" y="339.318" width="225.1" height="88"/>
-    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="554.562" y="353.318">voting_group</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="554.562" y="353.318">voting_groups</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="554.562" y="367.318">A group of votes, for example</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="554.562" y="381.318">"Financial Votes". Several votings are</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="554.562" y="395.318">linked to this. It references a certain</text>
