@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="26cm" height="11cm" viewBox="70 56 501 201" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="70" y="56" width="227" height="60"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="70" y="56" width="227" height="60"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="183.5" y="70">median_votes</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="183.5" y="84">Contains all votes for a median voting.</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="183.5" y="98">It references a voter and the</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="183.5" y="112">median_votings table.</text>
+    <rect style="fill: #ffffff" x="70" y="116" width="227" height="110"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="70" y="116" width="227" height="110"/>
+    <polygon style="fill: #000000" points="73,126 75,129 77,126 75,123 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="79" y="132">id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="158.3" y="132">uint</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="79" y1="133.6" x2="189.1" y2="133.6"/>
+    <ellipse style="fill: #000000" cx="75" cy="142" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="79" y="148">voting_id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="158.3" y="148">uint</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="84" y="162">references median_votings</text>
+    <ellipse style="fill: #000000" cx="75" cy="179" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="79" y="185">voter_id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="158.3" y="185">uint</text>
+    <ellipse style="fill: #000000" cx="75" cy="195" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="79" y="201">value</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="158.3" y="201">int</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="84" y="215">The value the voter voted for</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="338" y="59" width="232.05" height="88"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="338" y="59" width="232.05" height="88"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="454.025" y="73">schulze_votes</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="454.025" y="87">Contains all votes for a Schulze</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="454.025" y="101">voting. It references a voter and the</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="454.025" y="115">schulze_options table.  There should be</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="454.025" y="129">an entry for each possible option for a</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:normal" x="454.025" y="143">given vote.</text>
+    <rect style="fill: #ffffff" x="338" y="147" width="232.05" height="110"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="338" y="147" width="232.05" height="110"/>
+    <polygon style="fill: #000000" points="341,157 343,160 345,157 343,154 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="347" y="163">id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="480.2" y="163">uint</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="347" y1="164.6" x2="511" y2="164.6"/>
+    <ellipse style="fill: #000000" cx="343" cy="173" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="347" y="179">option_id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="480.2" y="179">uint</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="352" y="193">references schulze_options</text>
+    <ellipse style="fill: #000000" cx="343" cy="210" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="347" y="216">voter_id</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="480.2" y="216">uint</text>
+    <ellipse style="fill: #000000" cx="343" cy="226" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="347" y="232">sorting_position</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="480.2" y="232">uint</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="352" y="246">The position of the option.</text>
+  </g>
+</svg>
