@@ -35,9 +35,23 @@ import (
 	"unicode/utf8"
 )
 
+type Category struct {
+	Name    string
+	Created time.Time
+	ID      uint
+}
+
+type VotersRevision struct {
+	CategoryID uint
+	Created    time.Time
+	ID         uint
+}
+
 type Voter struct {
-	Name   string
-	Weight int
+	Name       string
+	Weight     int
+	ID         uint
+	RevisionID uint
 }
 
 func NewVoter(name string, weight int) *Voter {
@@ -72,7 +86,7 @@ func ParseVoters(r io.Reader) ([]*Voter, error) {
 			return nil, NewSyntaxError(lineNum, "Line must start with a *")
 		}
 		line = line[1:]
-		// line must end with : som int
+		// line must end with : some int
 		lastColon := strings.LastIndex(line, ":")
 		if lastColon < 0 {
 			return nil, NewSyntaxError(lineNum, "Line must contain \": weight\"")
@@ -226,7 +240,7 @@ func parseConcurrency(str string) (int, error) {
 		return -1, errors.New("Not a valid number, allowed format is XXXX.XX")
 	}
 	firstPart, secondPart := match[1], match[3]
-	switch len(secondPart) {
+	switch utf8.RuneCountInString(secondPart) {
 	case 0:
 		secondPart = "00"
 	case 1:
@@ -235,7 +249,6 @@ func parseConcurrency(str string) (int, error) {
 	return strconv.Atoi(firstPart + secondPart)
 }
 
-// TODO check length of input
 func ParseVotingCollection(r io.Reader) (*VotingCollection, error) {
 	scanner := bufio.NewScanner(r)
 	lineNumber := 1

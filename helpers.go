@@ -22,6 +22,8 @@
 
 package sturavoting
 
+import "time"
+
 // IntMin returns the minimum of a and b.
 func IntMin(a, b int) int {
 	if a < b {
@@ -38,4 +40,9 @@ func IntMax(a, b int) int {
 	} else {
 		return b
 	}
+}
+
+// Now returns the current time in UTC.
+func Now() time.Time {
+	return time.Now().UTC()
 }

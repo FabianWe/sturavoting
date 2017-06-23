@@ -1,6 +1,13 @@
 # config dir
 config
 
+# IDE stuff
+.idea
+
+# binaries
+/sturavoting
+/votingtest
+
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
 *.o
 *.a

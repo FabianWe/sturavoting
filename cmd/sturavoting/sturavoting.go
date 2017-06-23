@@ -43,5 +43,38 @@ func main() {
 	if configErr != nil {
 		log.WithError(configErr).Fatal("Can't parse config file(s)")
 	}
-	fmt.Println(appContext)
+	// categories, catErr := sturavoting.ListCategories(appContext)
+	// if catErr != nil {
+	// 	log.Fatal(catErr)
+	// }
+	// for _, c := range categories {
+	// 	fmt.Println(c)
+	// }
+	// revs, revsErr := sturavoting.ListVotersRevision(appContext, 1)
+	// if revsErr != nil {
+	// 	log.Fatal(revsErr)
+	// }
+	// for _, r := range revs {
+	// 	fmt.Println(r)
+	// }
+	// f, openErr := os.Open("examples/voters.txt")
+	// if openErr != nil {
+	// 	log.Fatal(openErr)
+	// }
+	// defer f.Close()
+	// voters, votersParseErr := sturavoting.ParseVoters(f)
+	// if votersParseErr != nil {
+	// 	log.Fatal(votersParseErr)
+	// }
+	// votersInsertErr := sturavoting.InsertVoters(appContext, 1, voters)
+	// if votersInsertErr != nil {
+	// 	log.Fatal(votersInsertErr)
+	// }
+	votersList, votersGetErr := sturavoting.ListVoters(appContext, 1)
+	if votersGetErr != nil {
+		log.Fatal(votersGetErr)
+	}
+	for _, v := range votersList {
+		fmt.Println(v)
+	}
 }
